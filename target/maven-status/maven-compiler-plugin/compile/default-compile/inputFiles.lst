@@ -1,0 +1,6 @@
+/home/dusan/practicecinema/src/main/java/cinema/db/repos/UserRepository.java
+/home/dusan/practicecinema/src/main/java/cinema/db/entities/User.java
+/home/dusan/practicecinema/src/main/java/cinema/service/CinemaController.java
+/home/dusan/practicecinema/src/main/java/cinema/service/TransferDtoToEnteties.java
+/home/dusan/practicecinema/src/main/java/cinema/dto/User.java
+/home/dusan/practicecinema/src/main/java/cinema/Application.java

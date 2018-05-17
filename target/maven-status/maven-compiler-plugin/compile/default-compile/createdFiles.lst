@@ -1,0 +1,6 @@
+cinema/service/TransferDtoToEnteties.class
+cinema/Application.class
+cinema/service/CinemaController.class
+cinema/db/repos/UserRepository.class
+cinema/db/entities/User.class
+cinema/dto/User.class
