@@ -27,11 +27,5 @@ public class CinemaController {
           halls.forEach(c -> tdte.update(c));
       }
       return  null;
-
     }
-
-
-
-
-
 }
