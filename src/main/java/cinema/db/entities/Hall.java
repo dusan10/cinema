@@ -4,7 +4,7 @@ package cinema.db.entities;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "Hall")
+@Table (name = "hall")
 public class Hall {
 
     @Id

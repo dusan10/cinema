@@ -10,6 +10,10 @@ public class User implements Serializable {
     private String email;
     private String mobile;
 
+    public User(int idUser) {
+        this.idUser = idUser;
+    }
+
     public User(int idUser, String userName, String userSurname, String email, String mobile) {
         this.idUser = idUser;
         this.userName = userName;

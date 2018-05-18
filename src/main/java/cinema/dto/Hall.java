@@ -7,6 +7,10 @@ public class Hall implements Serializable {
     private String hallName;
     private int capacity;
 
+    public Hall(int idHall) {
+        this.idHall = idHall;
+    }
+
     public Hall(int idHall, String hallName, int capacity) {
         this.idHall = idHall;
         this.hallName = hallName;

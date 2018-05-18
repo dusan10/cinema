@@ -7,7 +7,7 @@ import cinema.dto.User;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Reservation")
+@Table(name = "reservation")
 public class Reservation {
 
     @Id

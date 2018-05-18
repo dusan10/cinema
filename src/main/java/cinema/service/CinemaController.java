@@ -1,8 +1,8 @@
 package cinema.service;
 
 
-import cinema.db.entities.Hall;
 import cinema.db.repos.HallRepository;
+import cinema.dto.Hall;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,6 @@ public class CinemaController {
     @Autowired
     private HallRepository hallRepository;
 
-
     @GetMapping
     public Iterable findAll () {
         return hallRepository.findAll();
@@ -31,13 +30,20 @@ public class CinemaController {
 
     @GetMapping("/{idHall}")
     public Hall findEmptyHall (@PathVariable String hallName, int capacity){
-        return hallRepository.findEmpty(hallName, capacity);
+//        return hallRepository.findEmpty(hallName, capacity);
+        return new Hall(1, "adfasdf", 5);
     }
 
-    @RequestMapping(value = "/hall", method = RequestMethod.GET)
-    public ResponseEntity <Hall> get() {
-      return null;
+    @RequestMapping(value = "/hall", method = RequestMethod.POST)
+    public ResponseEntity <List<Hall>> update(@RequestBody List<Hall> halls) {
+//      halls.forEach(Hall::getIdHall);
+      if (!(halls == null) && !halls.isEmpty()){
+          halls.forEach(c -> tdte.update(c));
+      }
+      return  null;
+
     }
+
 
 
 

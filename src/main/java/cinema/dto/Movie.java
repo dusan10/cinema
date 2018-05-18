@@ -9,6 +9,10 @@ public class Movie implements Serializable {
     private String movieName;
     private LocalDate movieTime;
 
+    public Movie(int idMovie) {
+        this.idMovie = idMovie;
+    }
+
     public Movie(int idMovie, String movieName, LocalDate movieTime) {
         this.idMovie = idMovie;
         this.movieName = movieName;
