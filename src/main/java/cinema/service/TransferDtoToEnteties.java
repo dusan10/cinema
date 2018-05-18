@@ -72,4 +72,6 @@ public class TransferDtoToEnteties {
         return new cinema.db.entities.Reservation(reservation.getHall(), reservation.getUser(), reservation.getMovie());
     }
 
+
+
 }

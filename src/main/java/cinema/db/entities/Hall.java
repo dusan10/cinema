@@ -16,6 +16,8 @@ public class Hall {
     @Column(name = "capacity")
     private int capacity;
 
+
+
     public Hall(String hallName, int capacity) {
         this.hallName = hallName;
         this.capacity = capacity;
