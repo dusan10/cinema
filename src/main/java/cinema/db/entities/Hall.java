@@ -9,9 +9,9 @@ public class Hall {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idHall")
+    @Column(name = "id_hall")
     private int idHall;
-    @Column(name = "hallName")
+    @Column(name = "hall_name")
     private String hallName;
     @Column(name = "capacity")
     private int capacity;

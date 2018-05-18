@@ -30,13 +30,11 @@ public class CinemaController {
 
     @GetMapping("/{idHall}")
     public Hall findEmptyHall (@PathVariable String hallName, int capacity){
-//        return hallRepository.findEmpty(hallName, capacity);
-        return new Hall(1, "adfasdf", 5);
+        return new Hall(1, "Vuk Karadzic", 150);
     }
 
     @RequestMapping(value = "/hall", method = RequestMethod.POST)
     public ResponseEntity <List<Hall>> update(@RequestBody List<Hall> halls) {
-//      halls.forEach(Hall::getIdHall);
       if (!(halls == null) && !halls.isEmpty()){
           halls.forEach(c -> tdte.update(c));
       }

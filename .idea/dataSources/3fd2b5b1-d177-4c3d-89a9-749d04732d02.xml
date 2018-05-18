@@ -56,8 +56,8 @@
     <schema id="12" parent="2" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <IntrospectionTimestamp>2018-05-18.15:02:25.230</IntrospectionTimestamp>
-      <IntrospectionStateNumber>11781042</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-05-18.16:16:11.878</IntrospectionTimestamp>
+      <IntrospectionStateNumber>11781069</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -87,8 +87,8 @@
     <schema id="20" parent="3" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
-      <IntrospectionTimestamp>2018-05-18.15:02:25.535</IntrospectionTimestamp>
-      <IntrospectionStateNumber>11772729</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-05-18.16:16:12.467</IntrospectionTimestamp>
+      <IntrospectionStateNumber>11781050</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -122,49 +122,49 @@
     </sequence>
     <table id="25" parent="12" name="hall">
       <ObjectId>50559</ObjectId>
-      <StateNumber>11781040</StateNumber>
+      <StateNumber>11781068</StateNumber>
     </table>
-    <table id="26" parent="12" name="movies">
+    <table id="26" parent="12" name="movie">
       <ObjectId>50551</ObjectId>
-      <StateNumber>11781042</StateNumber>
+      <StateNumber>11781067</StateNumber>
     </table>
     <table id="27" parent="12" name="reservation">
       <ObjectId>50598</ObjectId>
-      <StateNumber>11781042</StateNumber>
+      <StateNumber>11781069</StateNumber>
     </table>
     <table id="28" parent="12" name="user">
       <ObjectId>50554</ObjectId>
-      <StateNumber>11781041</StateNumber>
+      <StateNumber>11781069</StateNumber>
     </table>
-    <sequence id="29" parent="20" name="am_transaction_id_seq">
-      <ObjectId>34465</ObjectId>
-      <StateNumber>1502512</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-      <CacheSize>1</CacheSize>
-    </sequence>
-    <sequence id="30" parent="20" name="am_transaction_sequence">
+    <sequence id="29" parent="20" name="am_transaction_sequence">
       <ObjectId>34463</ObjectId>
       <StateNumber>1502512</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="31" parent="20" name="car_id_seq">
-      <ObjectId>50521</ObjectId>
-      <StateNumber>11772728</StateNumber>
+    <sequence id="30" parent="20" name="car_id_seq">
+      <ObjectId>50641</ObjectId>
+      <StateNumber>11781049</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="32" parent="20" name="hibernate_sequence">
+    <sequence id="31" parent="20" name="hibernate_sequence">
       <ObjectId>34444</ObjectId>
       <StateNumber>1502508</StateNumber>
       <SequenceIdentity>1+50</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="33" parent="20" name="truck_id_seq">
-      <ObjectId>50532</ObjectId>
-      <StateNumber>11772729</StateNumber>
+    <sequence id="32" parent="20" name="truck_id_seq">
+      <ObjectId>50652</ObjectId>
+      <StateNumber>11781050</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="33" parent="20" name="am_transaction_id_seq">
+      <ObjectId>34465</ObjectId>
+      <StateNumber>1502512</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
@@ -178,8 +178,8 @@
       <StateNumber>1502512</StateNumber>
     </table>
     <table id="36" parent="20" name="car">
-      <ObjectId>50523</ObjectId>
-      <StateNumber>11772728</StateNumber>
+      <ObjectId>50643</ObjectId>
+      <StateNumber>11781049</StateNumber>
     </table>
     <table id="37" parent="20" name="databasechangelog">
       <ObjectId>34438</ObjectId>
@@ -198,23 +198,23 @@
       <StateNumber>1502510</StateNumber>
     </table>
     <table id="41" parent="20" name="truck">
-      <ObjectId>50534</ObjectId>
-      <StateNumber>11772729</StateNumber>
+      <ObjectId>50654</ObjectId>
+      <StateNumber>11781050</StateNumber>
     </table>
-    <column id="42" parent="25" name="idhall">
+    <column id="42" parent="25" name="id_hall">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11781026</StateNumber>
+      <StateNumber>11781055</StateNumber>
       <DefaultExpression>nextval(&apos;hall_idhall_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>hall_idhall_seq</SequenceName>
     </column>
-    <column id="43" parent="25" name="hallname">
+    <column id="43" parent="25" name="hall_name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11781026</StateNumber>
+      <StateNumber>11781056</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="44" parent="25" name="capacity">
@@ -226,107 +226,107 @@
     </column>
     <index id="45" parent="25" name="hall_pkey">
       <ObjectId>50566</ObjectId>
-      <ColNames>idhall</ColNames>
+      <ColNames>id_hall</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="46" parent="25" name="hall_pkey">
       <ObjectId>50567</ObjectId>
-      <ColNames>idhall</ColNames>
+      <ColNames>id_hall</ColNames>
       <UnderlyingIndexName>hall_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="47" parent="26" name="moviename">
+    <column id="47" parent="26" name="movie_name">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11781027</StateNumber>
+      <StateNumber>11781057</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="48" parent="26" name="idmovie">
+    <column id="48" parent="26" name="id_movie">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11781028</StateNumber>
+      <StateNumber>11781058</StateNumber>
       <DefaultExpression>nextval(&apos;movies_idmovie_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>movies_idmovie_seq</SequenceName>
     </column>
-    <index id="49" parent="26" name="movies_idmovie_pk">
+    <column id="49" parent="26" name="movie_time">
+      <Position>3</Position>
+      <DataType>time|0s</DataType>
+      <StateNumber>11781059</StateNumber>
+      <TypeId>1083</TypeId>
+    </column>
+    <index id="50" parent="26" name="movies_idmovie_pk">
       <ObjectId>50580</ObjectId>
-      <ColNames>idmovie</ColNames>
+      <ColNames>id_movie</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="50" parent="26" name="movies_idmovie_pk">
+    <key id="51" parent="26" name="movies_idmovie_pk">
       <ObjectId>50581</ObjectId>
-      <ColNames>idmovie</ColNames>
+      <ColNames>id_movie</ColNames>
       <UnderlyingIndexName>movies_idmovie_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="51" parent="27" name="idreservation">
+    <column id="52" parent="27" name="id_reservation">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11781040</StateNumber>
+      <StateNumber>11781066</StateNumber>
       <DefaultExpression>nextval(&apos;reservation_idreservation_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>reservation_idreservation_seq</SequenceName>
     </column>
-    <column id="52" parent="27" name="column_2">
-      <Position>2</Position>
-      <DataType>integer|0s</DataType>
-      <StateNumber>11781040</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
     <index id="53" parent="27" name="reservation_pkey">
       <ObjectId>50602</ObjectId>
-      <ColNames>idreservation</ColNames>
+      <ColNames>id_reservation</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="54" parent="27" name="reservation_pkey">
       <ObjectId>50603</ObjectId>
-      <ColNames>idreservation</ColNames>
+      <ColNames>id_reservation</ColNames>
       <UnderlyingIndexName>reservation_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="55" parent="27" name="idhall">
-      <ObjectId>50604</ObjectId>
-      <ColNames>idreservation</ColNames>
+    <foreign-key id="55" parent="27" name="id_hall">
+      <ObjectId>50669</ObjectId>
+      <ColNames>id_reservation</ColNames>
       <RefTableId>50559</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>hall</RefTableName>
       <RefKeyName>hall_pkey</RefKeyName>
-      <RefColNames>idhall</RefColNames>
+      <RefColNames>id_hall</RefColNames>
     </foreign-key>
-    <foreign-key id="56" parent="27" name="idmovie">
-      <ObjectId>50614</ObjectId>
-      <ColNames>idreservation</ColNames>
+    <foreign-key id="56" parent="27" name="id_movie">
+      <ObjectId>50664</ObjectId>
+      <ColNames>id_reservation</ColNames>
       <RefTableId>50551</RefTableId>
       <RefColPositions>2</RefColPositions>
-      <RefTableName>movies</RefTableName>
+      <RefTableName>movie</RefTableName>
       <RefKeyName>movies_idmovie_pk</RefKeyName>
-      <RefColNames>idmovie</RefColNames>
+      <RefColNames>id_movie</RefColNames>
     </foreign-key>
-    <foreign-key id="57" parent="27" name="iduser">
-      <ObjectId>50609</ObjectId>
-      <ColNames>idreservation</ColNames>
+    <foreign-key id="57" parent="27" name="id_user">
+      <ObjectId>50674</ObjectId>
+      <ColNames>id_reservation</ColNames>
       <RefTableId>50554</RefTableId>
       <RefColPositions>5</RefColPositions>
       <RefTableName>user</RefTableName>
       <RefKeyName>user_iduser_pk</RefKeyName>
-      <RefColNames>iduser</RefColNames>
+      <RefColNames>id_user</RefColNames>
     </foreign-key>
-    <column id="58" parent="28" name="username">
+    <column id="58" parent="28" name="user_name">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11781034</StateNumber>
+      <StateNumber>11781061</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="59" parent="28" name="usersurname">
+    <column id="59" parent="28" name="user_surname">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11781035</StateNumber>
+      <StateNumber>11781063</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="60" parent="28" name="email">
@@ -343,23 +343,23 @@
       <StateNumber>11781037</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="62" parent="28" name="iduser">
+    <column id="62" parent="28" name="id_user">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11781038</StateNumber>
+      <StateNumber>11781064</StateNumber>
       <DefaultExpression>nextval(&apos;user_iduser_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>user_iduser_seq</SequenceName>
     </column>
     <index id="63" parent="28" name="user_iduser_pk">
       <ObjectId>50594</ObjectId>
-      <ColNames>iduser</ColNames>
+      <ColNames>id_user</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="64" parent="28" name="user_iduser_pk">
       <ObjectId>50595</ObjectId>
-      <ColNames>iduser</ColNames>
+      <ColNames>id_user</ColNames>
       <UnderlyingIndexName>user_iduser_pk</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
@@ -459,7 +459,7 @@
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11772728</StateNumber>
+      <StateNumber>11781049</StateNumber>
       <DefaultExpression>nextval(&apos;car_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
       <SequenceName>car_id_seq</SequenceName>
@@ -467,28 +467,28 @@
     <column id="80" parent="36" name="color">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>11772728</StateNumber>
+      <StateNumber>11781049</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="81" parent="36" name="miles">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>11772728</StateNumber>
+      <StateNumber>11781049</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="82" parent="36" name="vin">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>11772728</StateNumber>
+      <StateNumber>11781049</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="83" parent="36" name="car_pkey">
-      <ObjectId>50530</ObjectId>
+      <ObjectId>50650</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="84" parent="36" name="car_pkey">
-      <ObjectId>50531</ObjectId>
+      <ObjectId>50651</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>car_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
@@ -712,7 +712,7 @@ name</ColNames>
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>11772729</StateNumber>
+      <StateNumber>11781050</StateNumber>
       <DefaultExpression>nextval(&apos;truck_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
       <SequenceName>truck_id_seq</SequenceName>
@@ -720,28 +720,28 @@ name</ColNames>
     <column id="120" parent="41" name="color">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>11772729</StateNumber>
+      <StateNumber>11781050</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="121" parent="41" name="miles">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>11772729</StateNumber>
+      <StateNumber>11781050</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="122" parent="41" name="vin">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>11772729</StateNumber>
+      <StateNumber>11781050</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="123" parent="41" name="truck_pkey">
-      <ObjectId>50541</ObjectId>
+      <ObjectId>50661</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="124" parent="41" name="truck_pkey">
-      <ObjectId>50542</ObjectId>
+      <ObjectId>50662</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>truck_pkey</UnderlyingIndexName>
       <Primary>1</Primary>

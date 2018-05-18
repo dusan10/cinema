@@ -9,11 +9,11 @@ public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idMovie")
+    @Column(name = "id_movie")
     private int idMovie;
-    @Column(name = "movieName")
+    @Column(name = "movie_name")
     private String movieName;
-    @Column(name = "movieTime")
+    @Column(name = "movie_time")
     private LocalDate movieTime;
 
     public Movie(String movieName, LocalDate movieTime) {

@@ -12,7 +12,8 @@ public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idReservation")
+    @Column(name = "id_reservation")
+    @PrimaryKeyJoinColumn
     private int idReservation;
     @Column(name = "hall")
     private Hall hall;

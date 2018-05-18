@@ -9,11 +9,11 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "idUser")
+    @Column (name = "id_user")
     private int idUser;
-    @Column (name = "userName")
+    @Column (name = "user_name")
     private String userName;
-    @Column (name = "userSurname")
+    @Column (name = "user_surname")
     private String userSurname;
     @Column (name = "email")
     private String email;
