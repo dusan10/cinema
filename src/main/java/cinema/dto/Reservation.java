@@ -1,68 +1,78 @@
 package cinema.dto;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.util.Objects;
 
 public class Reservation implements Serializable {
 
     private int idReservation;
-    private Hall hall;
-    private User user;
-    private Movie movie;
+    private String resrevationName;
+    private int idHall;
+    private int idUser;
+    private int idMovie;
 
-    public Reservation(int idReservation, Hall hall, User user, Movie movie) {
+    public Reservation(int idReservation, String resrevationName, int idHall, int idUser, int idMovie) {
         this.idReservation = idReservation;
-        this.hall = hall;
-        this.user = user;
-        this.movie = movie;
+        this.resrevationName = resrevationName;
+        this.idHall = idHall;
+        this.idUser = idUser;
+        this.idMovie = idMovie;
+    }
+
+    public Reservation(int idReservation, String resrevationName, Hall hall, User user, Movie movie) {
+        this.idReservation = idReservation;
+        this.resrevationName = resrevationName;
+        this.idHall = hall.getIdHall();
+        this.idUser = user.getIdUser();
+        this.idMovie = movie.getIdMovie();
     }
 
     public int getIdReservation() {
         return idReservation;
     }
 
-    public Hall getHall() {
-        return hall;
+    public String getResrevationName() {
+        return resrevationName;
     }
 
-    public User getUser() {
-        return user;
+    public int getIdHall() {
+        return idHall;
     }
 
-    public Movie getMovie() {
-        return movie;
+    public int getIdUser() {
+        return idUser;
     }
 
+    public int getIdMovie() {
+        return idMovie;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Reservation that = (Reservation) o;
-
-        if (idReservation != that.idReservation) return false;
-        if (hall != null ? !hall.equals(that.hall) : that.hall != null) return false;
-        if (user != null ? !user.equals(that.user) : that.user != null) return false;
-        return movie != null ? movie.equals(that.movie) : that.movie == null;
+        return idReservation == that.idReservation &&
+                Objects.equals(resrevationName, that.resrevationName) &&
+                Objects.equals(idHall, that.idHall) &&
+                Objects.equals(idUser, that.idUser) &&
+                Objects.equals(idMovie, that.idMovie);
     }
 
     @Override
     public int hashCode() {
-        int result = idReservation;
-        result = 31 * result + (hall != null ? hall.hashCode() : 0);
-        result = 31 * result + (user != null ? user.hashCode() : 0);
-        result = 31 * result + (movie != null ? movie.hashCode() : 0);
-        return result;
+
+        return Objects.hash(idReservation, resrevationName, idHall, idUser, idMovie);
     }
 
     @Override
     public String toString() {
         return "Reservation{" +
                 "idReservation=" + idReservation +
-                ", hall=" + hall +
-                ", user=" + user +
-                ", movie=" + movie +
+                ", resrevationName='" + resrevationName + '\'' +
+                ", idHall=" + idHall +
+                ", idUser=" + idUser +
+                ", idMovie=" + idMovie +
                 '}';
     }
 }
